@@ -1,5 +1,3 @@
-
-
 #include <CAN.h>
 
 void setup() {
