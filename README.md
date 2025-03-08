@@ -19,9 +19,9 @@ SN65HVD230 to SN65HVD230 Connections
 
 SN65HVD230 (Sender)  |    SN65HVD230 (Receiver)
 ---------------------|-------------------------
-       CANH   |   CANH
-       CANL   |   CANL
-       GND    |   GND
+CANH  |  CANH
+CANL  |  CANL   
+GND   |  GND
 
     
 
