@@ -1,0 +1,42 @@
+#include <CAN.h>
+
+#define TX_GPIO_NUM 5
+#define RX_GPIO_NUM 4
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial);
+
+  Serial.println("CAN Loopback Test");
+
+  CAN.setPins(RX_GPIO_NUM, TX_GPIO_NUM);
+
+  if (!CAN.begin(500E3)) {
+    Serial.println("Starting CAN failed!");
+    while (1);
+  }
+
+  // Enable loopback mode
+  CAN.loopback();  
+}
+
+void loop() {
+  Serial.println("Sending packet...");
+  CAN.beginPacket(0x12);
+  CAN.write('T');
+  CAN.write('E');
+  CAN.write('S');
+  CAN.write('T');
+  CAN.endPacket();
+
+  delay(1000);
+
+  int packetSize = CAN.parsePacket();
+  if (packetSize) {
+    Serial.print("Received: ");
+    while (CAN.available()) {
+      Serial.print((char)CAN.read());
+    }
+    Serial.println();
+  }
+}
