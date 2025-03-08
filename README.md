@@ -5,21 +5,25 @@ This document provides a step-by-step guide on setting up communication between 
 1. Wiring Connections
 Connect the components as follows:
 ESP32 to SN65HVD230 (for both sender and receiver)
-ESP32 Pin to	SN65HVD230 Pin
-3.3V	--> VCC
-GND	--> GND
-GPIO5 -->	TXD
-GPIO4  --> 	RXD
+
+ESP32 Pin |  SN65HVD230 Pin
+----------|----------------
+3.3V	| VCC
+GND	| GND
+GPIO5  |	TXD
+GPIO4  | 	RXD
 
 
 
 SN65HVD230 to SN65HVD230 Connections
-SN65HVD230 (Sender)     SN65HVD230 (Receiver)
-       CANH         -->   CANH
-       CANL         -->   CANL
-       GND          -->   GND
 
-       oftware Setup
+SN65HVD230 (Sender)  |    SN65HVD230 (Receiver)
+---------------------|-------------------------
+       CANH   |   CANH
+       CANL   |   CANL
+       GND    |   GND
+
+    
 
 2. Installing the CAN Library
 
