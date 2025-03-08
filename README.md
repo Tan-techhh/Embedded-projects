@@ -33,11 +33,12 @@ GND   |  GND
 
 (3.)Search for "CAN" and install the Arduino-CAN library that supports ESP32 version 1.0.6.
 
--->If the communication not works than you can try loopback test for both the ESP32 boards one by one.The loopback test code is attached here and connections are given below.
+>If the communication not works than you can try loopback test for both the ESP32 boards one by one.The loopback test code is attached here and connections are given below.
 
-ESP32 Pin      SN65HVD230 Pin
-3.3V     -->    VCC
-GND      -->    GND
-GPIO4    -->    TXD
-GPIO5    -->    RXD
+ESP32 Pin |  SN65HVD230 Pin
+----------|----------------
+3.3V	| VCC
+GND	| GND
+GPIO5  |	TXD
+GPIO4  | 	RXD
 
